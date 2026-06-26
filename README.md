@@ -12,9 +12,9 @@ Communicate with the Virtual Display app in real time
 ESP32-S3
 
 Wich item showed in the app can be 3 types:
-Numerics; \
-Boolean; \
-String; \
+>Numerics; \
+>Boolean; \
+>String; \
 example: Humidity(numerics), temperature(numerics), motors(numerics), led(bool), message(String), ... )
 
 ## 📡 Communication Protocol
@@ -30,24 +30,24 @@ This topic receives a request from the app indicating that it does not yet have 
 >**virtualDisplay/request_config** 
 
 App returns that it received a valid configuration \
-**virtualDisplay/config_ack** 
+>**virtualDisplay/config_ack** 
 
 If you are configuring button widgets that will be triggered by the app, you need to subscribe to the topic specified by the app—which will be distinguished by the title provided in this item, for example. \
-**virtualDisplay/button/lamp1** 
+>**virtualDisplay/button/lamp1** 
 
 And the topics to submitting informations are: \
 
 For send to configuration: \
-**virtualDisplay/response_config** 
+>**virtualDisplay/response_config** 
 
 For send to payload: \
-**virtualDisplay/data** 
+>**virtualDisplay/data** 
 
 Explain about the configuration message: \ 
-**device:**
+>**device:**
   Name of your device;
 
-**id:** 
+>**id:** 
   You should utilyze some id there are like the following list: \
     - speed; \
     - temperature; \
@@ -66,7 +66,7 @@ Explain about the configuration message: \
     - alarm; \
     - message;
 
-**type:**
+>**type:**
 Indicates if the data value is: number / bool / string. \
   If you using id: \
     - speed; \
@@ -88,25 +88,25 @@ Indicates if the data value is: number / bool / string. \
  Needs to use bool. \
  And if you use message needs to use string. 
 
-**title:**
+>**title:**
   Name you desire appear in the display.
 
-**decimal:** \
+>**decimal:** \
   Indicates how many decimal places should be considered.
 
-**unit:** \
+>**unit:** \
   The desired unit should appear after the number.
 
-**min:** \
+>**min:** \
   Minimum value to considered.
 
-**max:** \
+>**max:** \
   Maximum value to considered.
 
-**history:** \
+>**history:** \
   It should create a graphics or not.
 
-**value:** 
+>**value:** 
   Value for the item being configured.
 
 ## ▶️ Examples messages of the configuration and payload
