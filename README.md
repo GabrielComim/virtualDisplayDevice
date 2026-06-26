@@ -5,98 +5,98 @@ This project is an example firmware for ESP32-S3 using ESP-IDF, designed to demo
 The goal of this firmware is to show how an ESP32 device can:
 
 Connect to an MQTT broker
-Publish sensor data in JSON format
+Publish sensor data in JSON format.\
 Communicate with the Virtual Display app in real time
 
 ## ⚙️ Hardware
 ESP32-S3
 
 Wich item showed in the app can be 3 types:
-Numerics;
-Boolean;
-String;
+Numerics;\
+Boolean;\
+String;\
 example: Humidity(numerics), temperature(numerics), motors(numerics), led(bool), message(String), ... )
 
 ## 📡 Communication Protocol
-All communication is done using MQTT with JSON.
-For configuration, it's where you send all items you want to see in the app.
-Basicly you need to send 2 type messages, the configuration and payload to update the values for wich item.
+All communication is done using MQTT with JSON.\
+For configuration, it's where you send all items you want to see in the app.\
+Basicly you need to send 2 type messages, the configuration and payload to update the values for wich item.\
 About received, there are messages of the confirmation of operations and returns about some button if you configurate it.
 
 ## 📤 MQTT Topics
 So, you should subscribe to the following topics as needed:
 
-This topic receives a request from the app indicating that it does not yet have a valid configuration. It will not display anything on the main screen.
-**virtualDisplay/request_config**
+This topic receives a request from the app indicating that it does not yet have a valid configuration. It will not display anything on the main screen.\
+**virtualDisplay/request_config**\
 
-App returns that it received a valid configuration
-**virtualDisplay/config_ack**
+App returns that it received a valid configuration\
+**virtualDisplay/config_ack**\
 
-If you are configuring button widgets that will be triggered by the app, you need to subscribe to the topic specified by the app—which will be distinguished by the title provided in this item, for example.
-**virtualDisplay/button/lamp1**
+If you are configuring button widgets that will be triggered by the app, you need to subscribe to the topic specified by the app—which will be distinguished by the title provided in this item, for example.\
+**virtualDisplay/button/lamp1**\
 
-And the topics to submitting informations are:
+And the topics to submitting informations are:\
 
-For send to configuration:
-**virtualDisplay/response_config**
+For send to configuration:\
+**virtualDisplay/response_config**\
 
-For send to payload:
-**virtualDisplay/data**
+For send to payload:\
+**virtualDisplay/data**\
 
-Explain about the configuration message:
-**device:** 
-  Name of your device;
+Explain about the configuration message:\
+**device:** \
+  Name of your device;\
 
-**id:**
-  You should utilyze some id there are like the following list:
-    - speed;
-    - temperature;
-    - humidity;
-    - voltage;
-    - current;
-    - pressure;
-    - magnetic;
-    - level;
-    - detector;
-    - weight;
-    - other;
-    - gps;
-    - led;
-    - buzzer;
-    - alarm;
-    - message
+**id:**\
+  You should utilyze some id there are like the following list:\
+    - speed;\
+    - temperature;\
+    - humidity;\
+    - voltage;\
+    - current;\
+    - pressure;\
+    - magnetic;\
+    - level;\
+    - detector;\
+    - weight;\
+    - other;\
+    - gps;\
+    - led;\
+    - buzzer;\
+    - alarm;\
+    - message;\
 
-### type: 
-Indicates if the data value is: number / bool / string. 
-  If you using id: 
-    - speed;
-    - temperature;
-    - humidity;
-    - voltage;
-    - current;
-    - pressure;
-    - magnetic;
-    - level;
-    - detector;
-    - weight;
-    - other;
- Needs to use number.
- If you use:
-    - gps;
-    - led;
-    - buzzer;
- Needs to use bool.
- And if you use message needs to use string.
+### type: \
+Indicates if the data value is: number / bool / string. \
+  If you using id: \
+    - speed;\
+    - temperature;\
+    - humidity;\
+    - voltage;\
+    - current;\
+    - pressure;\
+    - magnetic;\
+    - level;\
+    - detector;\
+    - weight;\
+    - other;\
+ Needs to use number.\
+ If you use:\
+    - gps;\
+    - led;\
+    - buzzer;\
+ Needs to use bool.\
+ And if you use message needs to use string.\
 
-**title:**
-**decimal:**
-**unit:**
-**min:**
-**max:**
-**history:**
-**value:**
+**title:**\
+**decimal:**\
+**unit:**\
+**min:**\
+**max:**\
+**history:**\
+**value:**\
 
-## ▶️ Examples messages of the configuration and payload
+## ▶️ Examples messages of the configuration and payload\
 
 ```
 Example message for configuration:
@@ -149,7 +149,7 @@ Example message for configuration:
 }
 ```
 
-Example message for payload:
+Example message for payload:\
 ```
 {
   "values": {
@@ -162,22 +162,22 @@ Example message for payload:
 ```
 
 ## Tip
-If you want create another type differente of the items in the list types above I suggest to use type = other
+If you want create another type differente of the items in the list types above I suggest to use type = other\
 For each type in the configuration, the app personalize different icons to create a more intuitive and beautiful interface.
 
 ## 🧠 Integration with Virtual Display
 This firmware is designed to work directly with the Virtual Display app, which:
 
-Visualizes incoming MQTT data in real time
-Creates dashboards dynamically based on JSON structure
-Allows sending commands back to the device
+Visualizes incoming MQTT data in real time\
+Creates dashboards dynamically based on JSON structure\
+Allows sending commands back to the device\
 
 ## 🚀 Goal
 Provide a reference firmware for developers who want to build IoT systems using:
 
-ESP32
-MQTT
-Virtual Display dashboard
+ESP32\
+MQTT\
+Virtual Display dashboard\
 
 ## 📌 License
 Free to use for learning and development.
