@@ -12,10 +12,10 @@ Communicate with the Virtual Display app in real time
 ESP32-S3
 
 Wich item showed in the app can be 3 types:
->Numerics; \
->Boolean; \
->String; \
-example: Humidity(numerics), temperature(numerics), motors(numerics), led(bool), message(String), ... )
+*Numerics; \
+*Boolean; \
+*String; \
+Example: Humidity(numerics), temperature(numerics), motors(numerics), led(bool), message(String), ... )
 
 ## 📡 Communication Protocol
 All communication is done using MQTT with JSON. \
