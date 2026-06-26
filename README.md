@@ -49,44 +49,46 @@ Explain about the configuration message: \
 
 **id:** 
   You should utilyze some id there are like the following list: \
-    - speed
-    - temperature
-    - humidity
-    - voltage
-    - current
-    - pressure
-    - magnetic
-    - level
-    - detector
-    - weight
-    - other
-    - gps
-    - led
-    - buzzer
-    - alarm
-    - message
+    * speed
+    * temperature
+    * humidity
+    * voltage
+    * current
+    * pressure
+    * magnetic
+    * level
+    * detector
+    * weight
+    * other
+    * gps
+    * led
+    * buzzer
+    * alarm
+    * message
 
 **type:**
 Indicates if the data value is: number / bool / string. \
   If you using id: \
-    - speed
-    - temperature
-    - humidity
-    - voltage
-    - current
-    - pressure
-    - magnetic
-    - level
-    - detector
-    - weight
-    - other
+    * speed
+    * temperature
+    * humidity
+    * voltage
+    * current
+    * pressure
+    * magnetic
+    * level
+    * detector
+    * weight
+    * other
  Needs to use number. \
  If you use: \
-    - gps
-    - led
-    - buzzer
+    * gps
+    * led
+    * buzzer
  Needs to use bool. \
- And if you use message needs to use string. 
+ And if you use:
+ * message
+ Needs to use string. 
 
 **title:**
   Name you desire appear in the display.
