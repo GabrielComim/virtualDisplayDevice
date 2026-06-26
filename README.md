@@ -44,10 +44,10 @@ For send to payload: \
 **virtualDisplay/data** \
 
 Explain about the configuration message: \ 
-**device:** \
-  Name of your device; \
+**device:**
+  Name of your device;
 
-**id:** \
+**id:** 
   You should utilyze some id there are like the following list: \
     - speed; \
     - temperature; \
@@ -64,9 +64,9 @@ Explain about the configuration message: \
     - led; \
     - buzzer; \
     - alarm; \
-    - message; \
+    - message;
 
-### type: \
+**type:**
 Indicates if the data value is: number / bool / string. \
   If you using id: \
     - speed; \
@@ -86,17 +86,30 @@ Indicates if the data value is: number / bool / string. \
     - led; \
     - buzzer; \
  Needs to use bool. \
- And if you use message needs to use string. \
+ And if you use message needs to use string. 
 
-**title:** \
+**title:**
+  Name you desire appear in the display.
+
 **decimal:** \
-**unit:** \
-**min:** \
-**max:** \
-**history:** \
-**value:** \
+  Indicates how many decimal places should be considered.
 
-## ▶️ Examples messages of the configuration and payload\
+**unit:** \
+  The desired unit should appear after the number.
+
+**min:** \
+  Minimum value to considered.
+
+**max:** \
+  Maximum value to considered.
+
+**history:** \
+  It should create a graphics or not.
+
+**value:** 
+  Value for the item being configured.
+
+## ▶️ Examples messages of the configuration and payload
 
 ```
 Example message for configuration:
@@ -149,7 +162,7 @@ Example message for configuration:
 }
 ```
 
-Example message for payload:\
+Example message for payload:
 ```
 {
   "values": {
