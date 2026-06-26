@@ -162,15 +162,15 @@ Example message for payload:\
 ```
 
 ## Tip
-If you want create another type differente of the items in the list types above I suggest to use type = other\
+If you want create another type differente of the items in the list types above I suggest to use type = other \
 For each type in the configuration, the app personalize different icons to create a more intuitive and beautiful interface.
 
 ## 🧠 Integration with Virtual Display
 This firmware is designed to work directly with the Virtual Display app, which:
 
-Visualizes incoming MQTT data in real time\
-Creates dashboards dynamically based on JSON structure\
-Allows sending commands back to the device\
+Visualizes incoming MQTT data in real time \
+Creates dashboards dynamically based on JSON structure \
+Allows sending commands back to the device \
 
 ## 🚀 Goal
 Provide a reference firmware for developers who want to build IoT systems using:
