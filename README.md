@@ -27,21 +27,21 @@ About received, there are messages of the confirmation of operations and returns
 So, you should subscribe to the following topics as needed:
 
 This topic receives a request from the app indicating that it does not yet have a valid configuration. It will not display anything on the main screen.\
-**virtualDisplay/request_config** \
+>**virtualDisplay/request_config** 
 
 App returns that it received a valid configuration \
-**virtualDisplay/config_ack** \
+**virtualDisplay/config_ack** 
 
 If you are configuring button widgets that will be triggered by the app, you need to subscribe to the topic specified by the app—which will be distinguished by the title provided in this item, for example. \
-**virtualDisplay/button/lamp1** \
+**virtualDisplay/button/lamp1** 
 
 And the topics to submitting informations are: \
 
 For send to configuration: \
-**virtualDisplay/response_config** \
+**virtualDisplay/response_config** 
 
 For send to payload: \
-**virtualDisplay/data** \
+**virtualDisplay/data** 
 
 Explain about the configuration message: \ 
 **device:**
