@@ -48,43 +48,43 @@ Explain about the configuration message: \
   Name of your device;
 
 **id:** 
-  You should utilyze some id there are like the following list: \
-    * speed
-    * temperature
-    * humidity
-    * voltage
-    * current
-    * pressure
-    * magnetic
-    * level
-    * detector
-    * weight
-    * other
-    * gps
-    * led
-    * buzzer
-    * alarm
-    * message
+  You should utilyze some id there are like the following list:
+  * speed
+  * temperature
+  * humidity
+  * voltage
+  * current
+  * pressure
+  * magnetic
+  * level
+  * detector
+  * weight
+  * other
+  * gps
+  * led
+  * buzzer
+  * alarm
+  * message
 
 **type:**
 Indicates if the data value is: number / bool / string. \
-  If you using id: \
-    * speed
-    * temperature
-    * humidity
-    * voltage
-    * current
-    * pressure
-    * magnetic
-    * level
-    * detector
-    * weight
-    * other
+  If you using id:
+  * speed
+  * temperature
+  * humidity
+  * voltage
+  * current
+  * pressure
+  * magnetic
+  * level
+  * detector
+  * weight
+  * other
  Needs to use number. \
- If you use: \
-    * gps
-    * led
-    * buzzer
+ If you use:
+  * gps
+  * led
+  * buzzer
  Needs to use bool. \
  And if you use:
  * message
